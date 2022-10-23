@@ -16,9 +16,10 @@ $ npm install
 ```
 
 ## Create .env file
-Please create the .env file in the root of the project.
-The example .env file is located in /.example.env please create the same with the appropriate values.
+Please create the ```.env``` file in the root of the project, based on ```.env.example```.
 
+## Fill .env file
+Please fill in all the environment variables, if you have doubts, in the file ```.env.example``` you can see examples of the data you must enter.
 
 ## Running the app
 
