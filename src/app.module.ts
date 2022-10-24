@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CompaniesModule } from './companies/companies.module';
+import { CommonModule } from './common/common.module';
+import { TypesCompaniesModule } from './types-companies/types-companies.module';
+import { PersonsModule } from './persons/persons.module';
+import { TypesPersonsModule } from './types-persons/types-persons.module';
+import { CompaniesPersonsModule } from './companies-persons/companies-persons.module';
 
 @Module({
   imports: [
@@ -18,8 +22,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           autoLoadEntities: true,
           synchronize: true,
       }),
+      TypesCompaniesModule,
+      CompaniesModule,
+      CommonModule,
+      PersonsModule,
+      TypesPersonsModule,
+      CompaniesPersonsModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
